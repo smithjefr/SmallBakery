@@ -1,0 +1,2 @@
+# SmallBakery
+Paystack JI Project
