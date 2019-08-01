@@ -29,11 +29,13 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
 $result = curl_exec($ch);
 	 echo '<h2>Request Status</h2>';
 	 $data = json_decode($result, true);
-		 	echo  "<h3> {$data["message"]} with detail below: <br>";
-			echo "Institution: {$data["data"]["details"]["bank_name"]} <br>";
-			echo  "Account Number: {$data["data"]["details"]["account_number"]} <br>";
-			echo  "Beneficiary Name: {$data["data"]["details"]["account_name"]} <br>";
-			echo  "Recipient Code: {$data["data"]["recipient_code"]} </h3>(Please use this code for transfers)";
+<<< Text
+		 	<h3> {$data["message"]} with detail below: <br>
+			Institution: {$data["data"]["details"]["bank_name"]} <br>
+			Account Number: {$data["data"]["details"]["account_number"]} <br>
+			Beneficiary Name: {$data["data"]["details"]["account_name"]} <br>
+			Recipient Code: {$data["data"]["recipient_code"]} </h3>(Please use this code for transfers)
+Text;
 curl_close($ch);
 
 	}
