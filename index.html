@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Featured Tabs</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,700'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div class="container"> 
+<section id="fancyTabWidget" class="tabs t-tabs">
+        <ul class="nav nav-tabs fancyTabs" role="tablist">
+        
+                    <li class="tab fancyTab active">
+                    <div class="arrow-down"><div class="arrow-down-inner"></div></div>	
+                        <a id="tab0" href="#tabBody0" role="tab" aria-controls="tabBody0" aria-selected="true" data-toggle="tab" tabindex="0"><span class="fa fa-desktop"></span><span class="hidden-xs">Transfer Funds</span></a>
+                    	<div class="whiteBlock"></div>
+                    </li>
+                         
+                    <li class="tab fancyTab">
+                    <div class="arrow-down"><div class="arrow-down-inner"></div></div>
+                        <a id="tab4" href="#tabBody4" role="tab" aria-controls="tabBody4" aria-selected="true" data-toggle="tab" tabindex="0"><span class="fa fa-stack-overflow"></span><span class="hidden-xs">Create Beneficiary</span></a>
+                        <div class="whiteBlock"></div>
+                    </li>
+              
+        </ul>
+        <div id="myTabContent" class="tab-content fancyTabContent" aria-live="polite">
+                    <div class="tab-pane  fade active in" id="tabBody0" role="tabpanel" aria-labelledby="tab0" aria-hidden="false" tabindex="0">
+                        <div>
+							<div class="row">
+							
+                                <div class="col-md-12">
+                        			<h2>Please fill the Form below to Initiate a Transfer</h2>
+                                    <p>
+								<form action="script.php" method="POST" >
+									<label>Choose balance</label><br />
+										<input type="text" name="Balance" value="balance" readonly placeholder="Balance"><br>
+										<br /><br />
+										<label>How much do you want to send</label><br />
+										<input type="Int" name="Amount" value="" placeholder="Amount"><br>
+										<br /><br />
+										<label>Receipient Code</label><br />
+										<input type="text" name="Beneficiary" value=""><br>
+										<br /><br />
+										<label>Description</label><br />
+										<input type="text" name="Reason" value=""><br>
+										<br /><br />
+										<button type="submit" name="submit">Submit</button>
+								</form>
+                                </div>
+							</div>
+                          </div>
+                       </div>
+                    <div class="tab-pane  fade" id="tabBody4" role="tabpanel" aria-labelledby="tab4" aria-hidden="true" tabindex="0">
+                     <div>
+						<div class="row">
+                       		 <div class="col-md-12">
+                        			<h2>Input Details of New Beneficiary</h2>
+                                    <p>
+								<form action="stack.php" method="POST" >
+										<input type="text" name="Type" value="nuban" readonly placeholder="Nuban"><br>
+										<br /><br />
+										<input type="text" name="Beneficiary" value="" placeholder="Beneficiary Name" required><br>
+										<br /><br />
+										<h5>Select Bank</h5>
+										<select name="Bank" required>
+											<option value="">Select</option>
+										    <option value="044">ACCESS BANK</option>
+										    <option value="023">CITIBANK</option>
+										    <option value="050">ECOBANK NIGERIA</option>
+										    <option value="011">FIRST BANK OF NIGERIA</option>
+										    <option value="058">GUARANTY TRUST BANK</option>
+										    <option value="221">STANBIC IBTC BANK</option>
+										    <option value="068">STANDARD CHARTERED BANK</option>
+										    <option value="033">UNITED BANK FOR AFRICA</option>
+										    <option value="057">ZENITH BANK</option>
+										 </select>
+										  <br><br>
+										<br /><br />
+										<input type="int" name="Account" value="" placeholder="Account number" required><br>
+										<br /><br />
+										<input type="text" name="Currency" value="NGN" readonly placeholder="NGN"><br>
+										<br /><br />
+										<input type="submit" name="submit">
+								</form>
+                             </div>
+                          </div>
+                    </div>
+        		</div>
+		</div>
+    </section>
+</div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
