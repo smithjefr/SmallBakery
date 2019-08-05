@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Paystack Solutions</title>
+  
+  
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,700'>
+
+<link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div class="container"> 
+<section id="fancyTabWidget" class="tabs t-tabs">
+        <ul class="nav nav-tabs fancyTabs" role="tablist">
+        
+                    <li class="tab fancyTab active">
+                    <div class="arrow-down"><div class="arrow-down-inner"></div></div>	
+                        <a id="tab0" href="#tabBody0" role="tab" aria-controls="tabBody0" aria-selected="true" data-toggle="tab" tabindex="0"><span class="fa fa-desktop"></span><span class="hidden-xs">Transfer Funds</span></a>
+                    	<div class="whiteBlock"></div>
+                    </li>
+                         
+                    <li class="tab fancyTab">
+                    <div class="arrow-down"><div class="arrow-down-inner"></div></div>
+                        <a id="tab4" href="#tabBody4" role="tab" aria-controls="tabBody4" aria-selected="false" data-toggle="tab" tabindex="0" aria-expanded="false"><span class="fa fa-stack-overflow"></span><span class="hidden-xs">Create Beneficiary</span></a>
+                        <div class="whiteBlock"></div>
+                    </li>
+              
+        </ul>
+        <div id="myTabContent" class="tab-content fancyTabContent" aria-live="polite">
+                    <div class="tab-pane  fade active in" id="tabBody0" role="tabpanel" aria-labelledby="tab0" aria-hidden="false" tabindex="0">
+                        <div>
+							<div class="row">
+							
+                                <div class="col-md-12">
+								<form action="script.php" method="POST" >
+									<label>Source Account</label><br />
+										<input type="text" name="Balance" value="balance" readonly placeholder="Balance">
+										<br /><br />
+										<label>How much do you want to send</label><br />
+										<input type="number" min="0" name="Amount" value="">
+										<br /><br />
+										<label>Receipient Code</label><br />
+										<input type="text" name="Beneficiary" value="">
+										<br /><br />
+										<label>Description</label><br />
+										<input type="text" name="Reason" value="">
+										<br /><br />
+										<button type="submit" name="submit">Submit</button>
+					 </form>
+								<br><p>	
+					<form action="listTransfer.php" method="POST" >
+									<label><h2>Search for a previous transfer</h2></label><br />
+									<label>Input the reference code or ID of the transaction you want to retrieve</label><br />
+									<input type="text" name="Ref" value="">
+										<br /><br />
+									<button type="submit" name="submit">Submit</button>
+					</form><br>
+					<form action="fetchTransfers.php" method="GET" >
+									<button type="submit" name="Ref">Fetch all Transaction History</button>
+					
+								
+					</form>
+                                </div>
+							</div>
+                          </div>
+                       </div>
+                    <div class="tab-pane  fade" id="tabBody4" role="tabpanel" aria-labelledby="tab4" aria-hidden="true" tabindex="0">
+                     <div>
+						<div class="row">
+                       		 <div class="col-md-12">
+								<form action="stack.php" method="POST" >
+										<label>Account Type</label><br />
+										<input type="text" name="Type" value="nuban" readonly placeholder="Nuban">
+										<br /><br />
+										<label>Beneficiary Name</label><br />
+										<input type="text" name="Beneficiary" value="" required>
+										<br /><br />
+										<h5>Select Bank</h5>
+										<select name="Bank" required>
+											<option value="">Select Bank</option>
+										    <option value="044">ACCESS BANK</option>
+										    <option value="023">CITIBANK</option>
+										    <option value="050">ECOBANK NIGERIA</option>
+										    <option value="011">FIRST BANK OF NIGERIA</option>
+										    <option value="058">GUARANTY TRUST BANK</option>
+										    <option value="221">STANBIC IBTC BANK</option>
+										    <option value="068">STANDARD CHARTERED BANK</option>
+										    <option value="033">UNITED BANK FOR AFRICA</option>
+										    <option value="057">ZENITH BANK</option>
+										 </select>
+										<br /><br />
+										<label> Account Number</label><br />
+										<input type="number" minlength="10" name="Account" value="" required>
+										<br /><br />
+										<label>Currency</label><br />
+										<input type="text" name="Currency" value="NGN" readonly placeholder="NGN">
+										<br /><br />
+										<input type="submit" name="submit">
+								</form>
+								<br><p>	
+								<h2>Generate Beneficiary List</h2>
+								<form action="listRecipients.php" method="GET" >
+									<button type="submit" name="Ref">Click to view Created Beneficiaries</button>
+								</form>
+
+                             </div>
+                          </div>
+                    </div>
+        		</div>
+		</div>
+    </section>
+</div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
